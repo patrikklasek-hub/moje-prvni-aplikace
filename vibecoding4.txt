@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTMFix - Prùvodce KTM EXC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTMFix - Prùvodce KTM EXC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">KTM<span>Fix</span></div>
+        <nav id="hlavni-nav">
+            <a href="#" data-sekce="domu" class="nav-link active">Domù</a>
+            <a href="#" data-sekce="diagnostika" class="nav-link">Diagnostika</a>
+            <a href="#" data-sekce="navody" class="nav-link">Návody</a>
+            <a href="#" data-sekce="denik" class="nav-link">Servisní Deník</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="sekce-domu" class="sekce aktivni diagnostic-box">
+            <h2>Vítej v online garáži KTMFix</h2>
+            <p class="subtitle">Tvùj prùvodce opravami a údržbou motocyklù KTM EXC.</p>
+            <hr>
+            <p style="margin-bottom: 30px; line-height: 1.6;">Potøebuješ rychle zjistit, proè tvoje motorka nestartuje nebo ztrácí výkon? Nebo si chceš zapsat provedený servis? Vyber si jednu z možností.</p>
+            <div class="options-grid">
+                <button class="btn btn-primary" id="btn-start-diag-z-domova">Spustit Diagnostiku</button>
+            </div>
+        </section>
+
+        <section id="sekce-diagnostika" class="sekce diagnostic-box">
+            <h2>Garážový diagnostik</h2>
+            <p class="subtitle">Zjisti, co tvé KTM EXC chybí. Odpovìz na pár otázek.</p>
+            <hr>
+            <div id="quiz-container">
+                <h3 id="question-text">Naèítám otázky...</h3>
+                <div id="options-container" class="options-grid"></div>
+            </div>
+            <button id="restart-btn" class="btn btn-secondary" style="display: none;">Zaèít znovu</button>
+        </section>
+
+        <section id="sekce-navody" class="sekce diagnostic-box" style="text-align: left;">
+            <h2 style="text-align: center;">Servisní návody krok za krokem</h2>
+            <p class="subtitle" style="text-align: center;">Jak správnì opravit nejèastìjší závady na øadì EXC.</p>
+            <hr>
+            <h3 style="color: #ff6600; margin-bottom: 10px;">1. Výmìna zapalovací svíèky</h3>
+            <p style="margin-bottom: 20px; line-height: 1.6;">Odmontuj sedlo a nádrž, odpoj zapalovací kabel, pomocí svíèkového klíèe vyšroubuj starou svíèku a našroubuj novou (dotahuj s citem).</p>
+            <h3 style="color: #ff6600; margin-bottom: 10px;">2. Èištìní palivového mikrofiltru (TPI modely)</h3>
+            <p style="margin-bottom: 20px; line-height: 1.6;">Rozpoj rychlospojku palivové hadice pod nádrží. Pomocí malého šroubováku nebo vrutu opatrnì vytáhni plastový mikrofiltr uvnitø hadice a vymìò ho.</p>
+        </section>
+
+        <section id="sekce-denik" class="sekce diagnostic-box" style="text-align: left;">
+            <h2 style="text-align: center;">Mùj Servisní Deník</h2>
+            <p class="subtitle" style="text-align: center;">Zde si mùžeš zaznamenávat veškerou údržbu a opravy.</p>
+            <hr>
+
+            <form id="denik-form">
+                <div class="form-group">
+                    <label for="denik-datum">Datum servisu:</label>
+                    <input type="date" id="denik-datum" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="denik-mth">Stav motohodin (Mth) / Kilometry:</label>
+                    <input type="text" id="denik-mth" class="form-control" placeholder="Napø. 125 Mth nebo 4200 km" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="denik-text">Co se na motorce dìlalo:</label>
+                    <textarea id="denik-text" class="form-control" rows="3" placeholder="Napø. Výmìna oleje v pøevodovce (Motorex 15W50), vyèištìn vzduchový filtr..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 30px;">Uložit servisní záznam</button>
+            </form>
+
+            <h3 style="margin-bottom: 15px; color: #ff6600;">Historie oprav</h3>
+            <div id="denik-seznam"></div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
